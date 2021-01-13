@@ -1,0 +1,450 @@
+/* ---------------------------------
+----------- CSS RESET --------------
+--------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ----------------------------------
+------------- MAIN CSS --------------
+---------------------------------- */
+* {
+  box-sizing: border-box;
+  --smoky-black: #0f0905ff;
+  --ghost-white: #f0eff4ff;
+  --golden-rod: #F5B512;
+  --midnight-blue: #191970;
+
+  --head-font: 'Karla', sans-serif;
+  --body-font: 'Lato', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--body-font);
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--smoky-black);
+}
+
+/* ----------------------------------
+------------ HEADER CSS -------------
+---------------------------------- */
+header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  margin: 0;
+  padding: 0 2rem;
+
+  width: 100%;
+  height: 5rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--smoky-black);
+
+  z-index: 1;
+}
+
+.logo-text {
+  font-size: 4rem;
+  font-family: var(--head-font);
+  font-weight: bold;
+  color: var(--ghost-white);
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.link {
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--ghost-white);
+  margin: 0 2rem;
+}
+
+.link:hover,
+.mobile-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--golden-rod);
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+#toggle-menu {
+  display: none;
+}
+
+#mobile-toggle {
+  position: absolute;
+  top: 5rem;
+
+  width: 50%;
+  height: calc(100vh - 5rem);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, .8);
+
+  transition: .5s;
+}
+
+#menu-btn {
+  background-color: var(--smoky-black);
+  border: none;
+
+  width: 6rem;
+  height: 100%;
+}
+
+.mobile-link {
+  font-size: 3rem;
+  text-decoration: none;
+  color: var(--ghost-white);
+  margin: 2rem 0;
+}
+
+.mobile-hidden {
+  right: -350px;
+}
+
+.mobile-visible {
+  right: 0;
+}
+
+@media (max-width: 650px) {
+  nav {
+    display: none;
+  }
+
+  #toggle-menu {
+    display: block;
+  }
+}
+
+/* ----------------------------------
+------------- HOME CSS --------------
+---------------------------------- */
+.main-section {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 5rem);
+}
+
+#home {
+  background: url(./assets/blue-mountains.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 2rem;
+
+  transition: 1.5s;
+}
+
+#name-text {
+  font-size: 9rem;
+}
+
+.title {
+  font-family: var(--head-font);
+  font-size: 6rem;
+}
+
+.description-container {
+  margin: 2rem 0 0;
+  text-align: center;
+}
+
+.stagger-left {
+  text-align: left;
+}
+
+.stagger-middle {
+  text-align: center;
+}
+
+.stagger-right {
+  text-align: right;
+}
+
+.description-text {
+  font-size: 3.5rem;
+  color: var(--smoky-black);
+
+  margin: 2rem 0;
+
+  transition: .5s;
+}
+
+.large-text {
+  font-size: 9rem;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.emphasis {
+  display: inline-block;
+  font-family: var(--head-font);
+  font-size: 4rem;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: var(--golden-rod);
+  text-decoration-thickness: .6rem;
+
+  padding: 0 .5rem;
+}
+
+.emphasis:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  #home,
+  .stagger-left,
+  .stagger-middle,
+  .stagger-right {
+    text-align: center;
+  }
+}
+
+/* ----------------------------------
+----------- Project CSS -------------
+---------------------------------- */
+.section {
+  position: relative;
+  width: 100%;
+
+  margin: 4rem 0 8rem;
+  padding: 0 2rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.white-text {
+  color: white;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+.project {
+  width: 65%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: white;
+  border: none;
+
+  padding-right: 2rem;
+  margin: 4rem 0;
+
+  border-radius: .5rem;
+  box-shadow: 1rem 1rem var(--golden-rod);
+
+  overflow: hidden;
+
+  transition: .5s;
+}
+
+.project:hover {
+  box-shadow: 2rem 2rem var(--golden-rod);
+}
+
+.image-container {
+  height: 100%;
+  font-size: 0;
+}
+
+.project-img {
+  transition: .5s;
+  margin-right: 2rem;
+}
+
+.project-img:hover {
+  opacity: .8;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+
+  height: 100%;
+  width: 100%;
+
+  padding: 1rem 0;
+}
+
+.project-title {
+  font-size: 4rem;
+  font-family: var(--head-font);
+  text-align: center;
+}
+
+.project-text {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  height: 4rem;
+}
+
+.project-link {
+  margin: 0 .5rem;
+  transition: .5s;
+}
+
+.project-link:hover {
+  transform: scale(1.1);
+}
+
+/* ----------------------------------
+----------- About CSS ------------
+---------------------------------- */
+.about-container {
+  width: 65%;
+  margin: 4rem auto;
+  padding: 2rem;
+
+  background-color: white;
+  border-radius: .5rem;
+  box-shadow: 1rem 1rem var(--golden-rod);
+  transition: .5s;
+}
+
+.about-container:hover {
+  box-shadow: 2rem 2rem var(--golden-rod);
+}
+
+.about-text {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+}
+
+/* ----------------------------------
+----------- Contact CSS ------------
+---------------------------------- */
+#contact {
+  margin-top: 12rem;
+}
+
+.contact-container {
+  width: 65%;
+  margin: 4rem auto;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  border-radius: .5rem;
+  box-shadow: 1rem 1rem var(--golden-rod);
+  transition: .5s;
+}
+
+.contact-container:hover {
+  box-shadow: 2rem 2rem var(--golden-rod);
+}
+
+.contact-link {
+  margin: 0 2rem;
+  text-decoration: none;
+  color: black;
+  font-size: 3rem;
+
+  transition: .5s;
+}
+
+.contact-link:hover {
+  transform: scale(1.1);
+}
