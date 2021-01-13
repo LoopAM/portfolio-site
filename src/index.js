@@ -1,3 +1,5 @@
+import './style.css';
+
 // Mobile menu button function
 function toggleMobileMenu(e) {
   const menu = document.getElementById('mobile-toggle');

@@ -371,6 +371,7 @@ nav {
 
 .project-img {
   transition: .5s;
+  height: 100%;
 
   width: 300px;
 }
@@ -416,21 +417,21 @@ nav {
   transform: scale(1.1);
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1450px) {
   .project {
-    width: 70%;
+    width: 75%;
   }
 }
 
 @media (max-width: 1300px) {
   .project {
-    width: 80%;
+    width: 85%;
   }
 }
 
 @media (max-width: 1150px) {
   .project {
-    width: 85%;
+    width: 90%;
   }
 }
 
