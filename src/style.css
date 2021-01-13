@@ -164,7 +164,7 @@ nav {
 }
 
 .mobile-hidden {
-  right: -350px;
+  right: -600px;
 }
 
 .mobile-visible {
@@ -277,6 +277,36 @@ nav {
   }
 }
 
+@media (max-width: 500px) {
+  .large-text,
+  #name-text {
+    font-size: 7rem;
+  }
+
+  .emphasis {
+    font-size: 3.5rem;
+  }
+
+  .description-text {
+    font-size: 3.25rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .large-text,
+  #name-text {
+    font-size: 6rem;
+  }
+
+  .emphasis {
+    font-size: 3rem;
+  }
+
+  .description-text {
+    font-size: 2.75rem;
+  }
+}
+
 /* ----------------------------------
 ----------- Project CSS -------------
 ---------------------------------- */
@@ -307,11 +337,11 @@ nav {
 
 .project {
   width: 65%;
+  height: auto;
 
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
 
   background-color: white;
   border: none;
@@ -332,17 +362,21 @@ nav {
 }
 
 .image-container {
+  width: 300px;
   height: 100%;
+
   font-size: 0;
+  margin-right: 2rem;
 }
 
 .project-img {
   transition: .5s;
-  margin-right: 2rem;
+
+  width: 300px;
 }
 
 .project-img:hover {
-  opacity: .8;
+  opacity: .5;
 }
 
 .info-container {
@@ -351,10 +385,7 @@ nav {
   justify-content: space-between;
   align-content: center;
 
-  height: 100%;
-  width: 100%;
-
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
 
 .project-title {
@@ -364,6 +395,7 @@ nav {
 }
 
 .project-text {
+  margin: 1rem 0;
   font-size: 2rem;
   line-height: 2.5rem;
 }
@@ -373,8 +405,6 @@ nav {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-
-  height: 4rem;
 }
 
 .project-link {
@@ -384,6 +414,82 @@ nav {
 
 .project-link:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 1400px) {
+  .project {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .project {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .project {
+    width: 85%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .project {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .image-container,
+  .project-img {
+    width: 350px;
+  }
+}
+
+@media (max-width: 950px) {
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: start;
+
+    grid-gap: 2rem;
+  }
+
+  .project {
+    flex-direction: column;
+    width: 90%;
+    padding: 0;
+  }
+
+  .image-container,
+  .project-img {
+    width: 100%;
+  }
+
+  .info-container {
+    margin-top: 1rem;
+    padding: 0 2rem 2rem;
+
+  }
+}
+
+@media (max-width: 750px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .project-title {
+    font-size: 3rem;
+  }
+
+  .info-container {
+    padding: 0 1rem 1rem;
+  }
 }
 
 /* ----------------------------------
@@ -405,6 +511,7 @@ nav {
 }
 
 .about-text {
+  margin-bottom: 2rem;
   font-size: 2.5rem;
   line-height: 3.5rem;
 }
@@ -448,3 +555,68 @@ nav {
 .contact-link:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 1400px) {
+  .about-container,
+  .contact-container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .about-container,
+  .contact-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .about-container,
+  .contact-container {
+    width: 85%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .about-container,
+  .contact-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    height: auto;
+  }
+
+  .contact-link {
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 5rem;
+  }
+
+  .about-text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-container {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
