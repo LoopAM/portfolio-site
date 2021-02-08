@@ -9,6 +9,7 @@ function toggleMobileMenu(e) {
 // Event listener for mobile menu button
 const button = document.getElementById('menu-btn');
 button.addEventListener('click', toggleMobileMenu);
+
 const mobileLinks = Array.from(document.getElementsByClassName('mobile-link'));
 mobileLinks.forEach( element => {
   element.addEventListener('click', toggleMobileMenu);
@@ -63,7 +64,7 @@ const webDevElement = document.getElementById('web-dev-text');
 webDevElement.addEventListener('click', changeHome);
 
 const woodworkerElement = document.getElementById('woodworker-text');
-woodworkerElement,addEventListener('click', changeHome);
+woodworkerElement.addEventListener('click', changeHome);
 
 
 
